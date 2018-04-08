@@ -30,4 +30,4 @@ LABEL io.k8s.description="Hello World Java app running on Centos 7 with JWS 3.1 
 USER 0
 # TODO: Set the default CMD for the image
 #CMD [ "/opt/webserver/bin/launch.sh"; /bin/bash -c "trap : TERM INT; sleep infinity & wait" ]
-#CMD [ "/opt/webserver/bin/launch.sh" ]
+CMD [ "/opt/webserver/bin/launch.sh" ]
