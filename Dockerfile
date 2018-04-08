@@ -2,7 +2,7 @@ FROM arvindockerregistry.azurecr.io/jws31t8:latest
 
 USER root
 
-COPY deploy/ /opt/webapps/webapps
+COPY deploy/ /opt/webserver/webapps
 
 
 EXPOSE 8080 8443 8778 9300
@@ -15,8 +15,7 @@ LABEL io.k8s.description="Hello World Java app running on Centos 7 with JWS 3.1 
 	org.jboss.product="webserver-tomcat8" \
 	org.jboss.product.openjdk.version="1.8.0" \
 	org.jboss.product.version="3.1.1" \
-	org.jboss.product.webserver-tomcat7.version="3.1.1" \
-	io.openshift.s2i.scripts-url="image:///usr/local/s2i" \	
+	org.jboss.product.webserver-tomcat8.version="3.1.1" \
 	io.openshift.expose-services="8080:http" \
 	version="0.5"
 
